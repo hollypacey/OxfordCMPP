@@ -1,5 +1,4 @@
-# flag important to use pplxint ROOT installation for ease.
-python -m venv venv --system-site-packages
-source venv/bin/activate
-pip install jupyter ipython ipykernel
+python -m venv venv_pythonic
+source venv_pythonic/bin/activate
+pip install -r setup/requirements.txt 
 
