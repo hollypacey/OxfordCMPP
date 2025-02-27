@@ -7,3 +7,8 @@ awkward
 vector
 matplotlib
 tables
+seaborn
+scikit-learn
+lightgbm
+tensorflow
+shap
