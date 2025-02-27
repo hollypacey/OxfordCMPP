@@ -14,7 +14,7 @@ scp -r -o 'ProxyJump username@bastion.physics.ox.ac.uk' username@pplxint12.physi
 
 OR you can download it directly from here: https://atlas-opendata.web.cern.ch/Legacy13TeV/   GamGam.zip has everything.
 
-# Launching a Jupyter notebook 
+# Launching a Jupyter notebook remotely 
 We want to run Jupyter remotely on pplxint but open the notebook in a browser on our laptop.
 
 ### From a linux machine:
@@ -40,8 +40,7 @@ It *should* be sufficient to now just launch the notebook on pplxint in your ter
 3) Connect to pplxint (`ssh {username}@pplxint12.physics.ox.ac.uk`)
 4) Activate your conda/virtual environment.
 5) `jupyter notebook password` --> enter a password (will be used to access a Jupyter session).
-6) Launch a Jupyter session on the remote server
-`jupyter lab --no-browser &`
+6) Launch a Jupyter session on the remote server: `jupyter notebook --no-browser &`
 Make a note of the port used (You should see some printout like `Jupyter Server is running at: http://localhost:{port}/)`
 7) On a local terminal window, run `ssh -N -f -L 8888:localhost:{port} {username}@pplxint12.physics.ox.ac.uk`
 8) Fire up your browser and type `localhost:8888`. Enter the password you set in step (5). You should now have the remote Jupyter session running in your browser.
