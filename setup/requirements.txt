@@ -6,3 +6,8 @@ pandas
 awkward
 vector
 matplotlib
+seaborn
+scikit-learn
+lightgbm
+tensorflow
+shap
