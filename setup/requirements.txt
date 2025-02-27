@@ -6,3 +6,4 @@ pandas
 awkward
 vector
 matplotlib
+tables
