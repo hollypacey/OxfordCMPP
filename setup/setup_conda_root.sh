@@ -1,4 +1,4 @@
-# set up your conda installation
+# set up your conda installation, beware this won't work on windows :(
 # eval "$(/your/path/toe/miniconda/bin/conda shell.bash hook)"
 
 conda create -c conda-forge --name cmpp_root_env root python=3.8
