@@ -151,8 +151,7 @@ If you want to look at an example of analysing/processing a ROOT Ntuple (TTree) 
 - ```part1_process_TTree_pythonic.ipynb``` then ```part1_plotter_pythonic.ipynb``` using Uproot/Awkward/Pandas/MatPlotLib.
 This uses ATLAS open data for a Higgs -> GammaGamma analysis. Ideally you could look at both sets of scripts to compare how the different tools do the same thing.
 
-If you want a  different look at using Pandas Dataframes to process some Miniboone data you can follow:
-...
-
-And shorter tutorials on MatPlotLib and Numpy can also be found here:
-...
+If you want a different look at using Pandas Dataframes to process some Miniboone data, or shorter tutorials on MatPlotLib and Numpy, look in the ToolTutorials/ directory:
+- ```MatplotlibExample.ipynb```
+- ```NumPyExamples.ipynb```
+- ```PandasTests.ipynb```
