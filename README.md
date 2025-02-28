@@ -13,6 +13,11 @@ in the directory you want to work in:
 git clone <ssh path>
 ```
 
+The tutorials are all based in jupyter notebooks and use virtual environments.
+Jupyter notebooks are good for tutorials to step though bits of code in subsections, edit and rerun small parts, and to see worked examples.
+You can also still view the code itself on the git repo online.
+However, in your actual PhD work we'd recommend using proper scripts in a modular package structure.
+
 # Setting up the environment
 
 ## The tutorials that use ROOT: 
@@ -29,9 +34,8 @@ Elsewhere, assuming you don't have a local ROOT installation, use conda. Althoug
 Either set up a venv using the ```setup/setup_venv.sh``` scripts. 
 
 Or use conda to set up the virtual environment:
-- Download and Install miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need)
-- switch it on, via ```eval "$(/your/path/to/miniconda/bin/conda shell.bash hook)"```
-- create and set up the environment via ```setup/setup_conda.sh``` script.
+- Download, install and activate miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need)
+- create and set up the environment via ```source setup/setup_conda.sh```
 
 # Getting the part1 data:
 
@@ -83,7 +87,7 @@ Make a note of the port used (You should see some printout like `Jupyter Server 
 
 ## ssh into pplxint via VSCode:
 - For windows: Install and setup windows openssh first [info](https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client)
-- Then setup ssh in vscode [info](https://code.visualstudio.com/docs/remote/ssh). Follow instructions to make ssh keys for bastion and pplxint12/13.
+- Then setup ssh in vscode [info](https://code.visualstudio.com/docs/remote/ssh), helpful stack overflow about bastion jumping [here](https://stackoverflow.com/questions/76484417/vscode-how-to-connect-to-remote-ssh-host-inside-an-ssh-host). Follow instructions to make ssh keys for bastion and pplxint12/13.
   Involves making a ~/.ssh/config that will look roughly like this:
 ```
 Host bastion
@@ -109,9 +113,9 @@ some info [here](https://code.visualstudio.com/docs/datascience/jupyter-notebook
 
 # Part 0 - Before Tutorials
 
-Please check you can download the git repo and setup conda/venv for either the root/pythonic environment, depending on which tutorial you think you'd like to do.
+Please check you can download the git repo and setup conda/venv for either the root/pythonic environment, depending on which tutorial you think you'd like to do (see below).
 
-We can also check that you can practice pushing to a repo, so after you have cloned it and moved into the repo folder....
+(optional) You can also check that you can practice pushing to a repo, so after you have cloned it and moved into the repo folder....
 
 If any time has passed, check you have all the latest changes:
 ```
@@ -143,18 +147,19 @@ Then back in your local directory, pull/fetch again to get the new remote repo c
 
 # Part 1
 
-There are too many topics to fit into one hour, and you have too broad a range of existing experience. So, you have many choices of what to do now! All the materials will also remain available to you if later on in your PhD you want to come back and learn about something else.
-
-If you would prefer to learn more about any of the RSE concepts in the lecture you can look at the broad tutorial provided by the Oxford DTC:
-- pre-recs: [here](https://train.rse.ox.ac.uk/event/37#What-you-will-need)
-- course materials: [here](https://train.rse.ox.ac.uk/material)
+There are too many topics to fit into one hour, and you have too broad a range of existing experience/needs. So, you have many choices of what to do now! All the materials will also remain available to you if later on in your PhD you want to come back and learn about something else.
 
 If you want to look at an example of analysing/processing a ROOT Ntuple (TTree) to extract histograms with a given selection, and then create plots you can follow things in the AnalsisTutorials/ directory:
-- ```part1_process_TTree_root.ipynb```, then ```part1_plotter_pythonic.ipynb``` using pyROOT
-- ```part1_process_TTree_pythonic.ipynb``` then ```part1_plotter_pythonic.ipynb``` using Uproot/Awkward/Pandas/MatPlotLib.
+- ```part1_process_TTree_root.ipynb```, then ```part1_plotter_pythonic.ipynb``` using pyROOT (needs the ROOT environment)
+- ```part1_process_TTree_pythonic.ipynb``` then ```part1_plotter_pythonic.ipynb``` using Uproot/Awkward/Pandas/MatPlotLib. (doesn't need the ROOT environment)
 This uses ATLAS open data for a Higgs -> GammaGamma analysis. Ideally you could look at both sets of scripts to compare how the different tools do the same thing.
 
-If you want a different look at using Pandas Dataframes to process some Miniboone data, or shorter tutorials on MatPlotLib and Numpy, look in the ToolTutorials/ directory:
+If you want a different look at using Pandas Dataframes to process some Miniboone data, or shorter tutorials on MatPlotLib and Numpy, look in the ToolTutorials/ directory (none need ROOT):
 - ```MatplotlibExample.ipynb```
 - ```NumPyExamples.ipynb```
 - ```PandasTests.ipynb```
+
+If you would prefer to learn more about any of the other concepts in the lecture you can look at the broad tutorial provided by the Oxford DTC:
+- pre-recs: [here](https://train.rse.ox.ac.uk/event/37#What-you-will-need)
+- course materials: [here](https://train.rse.ox.ac.uk/material)
+You can use this as a guide later also if you want to refactor/document/setup-CI/setup-Git/improve any of your existing code.
