@@ -1,6 +1,9 @@
 # Downloading the Git code
 
 Can use either the github or gitlab.cern repos.
+- [https://gitlab.cern.ch/hpacey/oxfordcmpp](https://gitlab.cern.ch/hpacey/oxfordcmpp)
+- [https://github.com/hollypacey/OxfordCMPP](https://github.com/hollypacey/OxfordCMPP)
+Anyone can get a github account, and anyone with a cern account will have a gitlab cern account.
 Recommend to set up SSH keys on your machine for authentication. Instructions here to generate a new key and upload it: [github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) [gitlab](https://docs.gitlab.com/user/ssh/)
 
 go to the repo url and in the drop down menu for 'code' copy the ssh path.
