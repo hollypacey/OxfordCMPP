@@ -10,7 +10,6 @@ in the directory you want to work in:
 git clone <ssh path>
 ```
 
-
 # Setting up the environment
 
 ## The tutorials that use ROOT: 
@@ -104,3 +103,56 @@ some info [here](https://code.visualstudio.com/docs/datascience/jupyter-notebook
 - open notebook via ```jupyter-notebook file.ipynb``` or via the explorer.
 - on the top right click 'select kernel', click 'Python Environments...' in the top menu, then select the appropriate venv/conda path.
 
+
+# Part 0 - Before Tutorials
+
+Please check you can download the git repo and setup conda/venv for either the root/pythonic environment, depending on which tutorial you think you'd like to do.
+
+We can also check that you can practice pushing to a repo, so after you have cloned it and moved into the repo folder....
+
+If any time has passed, check you have all the latest changes:
+```
+git pull origin master
+```
+(or main instead of master if using github)
+
+Create a new branch from main/master that you can develop the code in.
+```
+git checkout -b <your_name>_banch
+```
+
+We can check you can push code to the repo with a random simple example...
+```
+mkdir ascii_art
+```
+Go find your favourite ascii art animal picture from here: [here](https://www.asciiart.eu/animals)
+and put it into a text file called ```<your_name>.txt``` in the ascii_art folder.
+
+Lets put it on git:
+```
+git add ascii_art/<your_name>.txt
+git commit -m "my animal"
+git push origin <your_name_branch>
+```
+
+Which creates a new branch of the code in the online repo with your change. You can then, via the web browser, create a Merge/Pull request with your branch as a source, and main/master as the 'target'. If you add Ben and Holly as reviewers then we can check it and merge it in.
+Then back in your local directory, pull/fetch again to get the new remote repo changes in your local repo, and switch back to the master/main branch fresh for future development....
+
+# Part 1
+
+There are too many topics to fit into one hour, and you have too broad a range of existing experience. So, you have many choices of what to do now! All the materials will also remain available to you if later on in your PhD you want to come back and learn about something else.
+
+If you would prefer to learn more about any of the RSE concepts in the lecture you can look at the broad tutorial provided by the Oxford DTC:
+- pre-recs: [here](https://train.rse.ox.ac.uk/event/37#What-you-will-need)
+- course materials: [here](https://train.rse.ox.ac.uk/material)
+
+If you want to look at an example of analysing/processing a ROOT Ntuple (TTree) to extract histograms with a given selection, and then create plots you can follow things in the AnalsisTutorials/ directory:
+- ```part1_process_TTree_root.ipynb```, then ```part1_plotter_pythonic.ipynb``` using pyROOT
+- ```part1_process_TTree_pythonic.ipynb``` then ```part1_plotter_pythonic.ipynb``` using Uproot/Awkward/Pandas/MatPlotLib.
+This uses ATLAS open data for a Higgs -> GammaGamma analysis. Ideally you could look at both sets of scripts to compare how the different tools do the same thing.
+
+If you want a  different look at using Pandas Dataframes to process some Miniboone data you can follow:
+...
+
+And shorter tutorials on MatPlotLib and Numpy can also be found here:
+...
