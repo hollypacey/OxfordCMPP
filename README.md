@@ -29,9 +29,8 @@ Elsewhere, assuming you don't have a local ROOT installation, use conda. Althoug
 Either set up a venv using the ```setup/setup_venv.sh``` scripts. 
 
 Or use conda to set up the virtual environment:
-- Download and Install miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need)
-- switch it on, via ```eval "$(/your/path/to/miniconda/bin/conda shell.bash hook)"```
-- create and set up the environment via ```setup/setup_conda.sh``` script.
+- Download, install and activate miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need)
+- create and set up the environment via ```source setup/setup_conda.sh```
 
 # Getting the part1 data:
 
