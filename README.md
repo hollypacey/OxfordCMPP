@@ -150,7 +150,8 @@ Then back in your local directory, pull/fetch again to get the new remote repo c
 There are too many topics to fit into one hour, and you have too broad a range of existing experience/needs. So, you have many choices of what to do now! All the materials will also remain available to you if later on in your PhD you want to come back and learn about something else.
 
 If you want to look at an example of analysing/processing a ROOT Ntuple (TTree) to extract histograms with a given selection, and then create plots you can follow things in the AnalsisTutorials/ directory:
-- ```part1_process_TTree_root.ipynb```, then ```part1_plotter_pythonic.ipynb``` using pyROOT (needs the ROOT environment)
+- ```part1_process_TTree_root.ipynb```, then ```part1_plotter_root.ipynb``` using pyROOT (needs the ROOT environment)
+- ```part1_process_TTree_root.cpp```, then ```part1_plotter_root.cpp``` using C++ ROOT (needs the ROOT environment). This uses the 'HistMaker' class in the same folder, that you should look through too. in setup/ there are bash scripts to compile and run the code.
 - ```part1_process_TTree_pythonic.ipynb``` then ```part1_plotter_pythonic.ipynb``` using Uproot/Awkward/Pandas/MatPlotLib. (doesn't need the ROOT environment)
 This uses ATLAS open data for a Higgs -> GammaGamma analysis. Ideally you could look at both sets of scripts to compare how the different tools do the same thing.
 
