@@ -164,3 +164,5 @@ If you would prefer to learn more about any of the other concepts in the lecture
 - pre-recs: [here](https://train.rse.ox.ac.uk/event/37#What-you-will-need)
 - course materials: [here](https://train.rse.ox.ac.uk/material)
 You can use this as a guide later also if you want to refactor/document/setup-CI/setup-Git/improve any of your existing code.
+
+Alternatively, the HEP Software Foundation has excellent tutorials on the topics covered and more: [https://hsf-training.org/training-center/](https://hsf-training.org/training-center/).
