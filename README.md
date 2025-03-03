@@ -159,6 +159,8 @@ If you want a different look at using Pandas Dataframes to process some Miniboon
 - ```MatplotlibExample.ipynb```
 - ```NumPyExamples.ipynb```
 - ```PandasTests.ipynb```
+There is an example of how to submit a batch job on pplxint too, instructions here:
+- ```ToolTutorials/batchtest_readme.md```
 
 If you would prefer to learn more about any of the other concepts in the lecture you can look at the broad tutorial provided by the Oxford DTC:
 - pre-recs: [here](https://train.rse.ox.ac.uk/event/37#What-you-will-need)
