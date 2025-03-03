@@ -14,6 +14,20 @@
 #include <sys/stat.h>
 #include <stdexcept>
 
+/*
+We're looking at processing an input ROOT TTree, applying some analysis selections, and outputting a set of histograms for further analysis.
+
+This example uses ATLAS open data from 2015+2016. We are looking at a simple version of the Higgs->GammaGamma discovery anlaysis.
+(https://arxiv.org/pdf/1408.7084)
+
+Things to try:
+- Can we improve the signal selection here - adding the Tight Photon ID requirement for example.
+- where there are #TODOs in the code
+- What if we also wanted a function to define 2D histograms?
+- if this was an actually python script, not a jupyeter notebook, how might you change the way we are setting up our hard-coded settings?
+- It would be useful to have a cutflow - and see how many of our events are passing each event selection stage (bear in mind that our MC events are weighted). You could just print out these numbers, or even write a cutflow histogram into our output (with each bin a different cut and giving the bins string labels)
+*/
+
 // Main function to run in executable
 int main(int argc, char* argv[])
 {
