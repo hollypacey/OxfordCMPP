@@ -7,4 +7,4 @@ conda activate cmpp_root_env
 conda install anaconda::jupyter
 conda install anaconda::ipykernel
 conda install anaconda::ipython
-
+pip install scipy matplotlib seaborn
