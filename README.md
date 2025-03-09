@@ -177,7 +177,7 @@ In the Fitting folder there are
 (1) a number of small standalone notebooks to show simple examples of diffeent aspects of RooStats, bayesian inference and MCMC. (taken from last year)
 
 (2) a meaty Higgs -> diphoton script going through a full discovery/exclusion analysis with RooStats (new, kept as .py not .ipynb after the email from IT on friday, sorry)
-- This builds on the results from part1, namely the histograms made. We have a slightly more complete version, compared to last week this just has a few more cuts added and runs over all the Higgs signal processes. The final version of the code can be found here if you are interested:  ```part1_process_TTree_root_completed.ipynb```.
+- This builds on the results from part1, namely the histograms made. We have a slightly more complete version, compared to last week this just has a few more cuts added and runs over all the Higgs signal processes. The final version of the code can be found here if you are interested:  ```part1_process_TTree_root_completed.ipynb```. We've added the needed histograms to git.
 - Please set up an environment with ROOT (or if you are on pplxint you don't need to setup anything).
 The RooStats script is run via: ```python Fitting/part2_discoHiggs.py  -i histograms/GamGam_root/ -o plots/ -f poly4```
 - As the top of the script says, we suggest you work through this by commenting out everything in main() and slowly readding each step. For each step, read through the function and terminal outputs to check your understanding bit by bit.
