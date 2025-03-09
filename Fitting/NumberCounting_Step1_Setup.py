@@ -1,5 +1,10 @@
 import ROOT, os
 
+# Questions
+# 1) What is the likelihood here (in the absence of systematics)?
+# 2) What are the NPs here?
+# 3) What do we want to measure?
+
 os.makedirs('./workspaces/NumberCounting',exist_ok = True)
 
 # Defining the dataset
