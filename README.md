@@ -174,7 +174,7 @@ Alternatively, the HEP Software Foundation has excellent tutorials on the topics
 
 In the Fitting folder there are
 
-(1) a number of small standalone notebooks to show simple examples of diffeent aspects of RooStats, bayesian inference and MCMC. (taken from last year)
+(1) a number of small standalone notebooks to show simple examples of diffeent aspects of RooStats, bayesian inference, MCMC, and SPlot. (taken from last year / online)
 
 (2) a meaty Higgs -> diphoton script going through a full discovery/exclusion analysis with RooStats (new, kept as .py not .ipynb after the email from IT on friday, sorry)
 - This builds on the results from part1, namely the histograms made. We have a slightly more complete version, compared to last week this just has a few more cuts added and runs over all the Higgs signal processes. The final version of the code can be found here if you are interested:  ```part1_process_TTree_root_completed.ipynb```. We've added the needed histograms to git.

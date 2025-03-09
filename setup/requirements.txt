@@ -15,3 +15,5 @@ shap
 seaborn
 numpy==1.26.4
 mplhep
+zfit
+hepstats
