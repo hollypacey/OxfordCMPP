@@ -1,5 +1,8 @@
 # Pre-Tutorial Setup Instructions
 
+If you have any trouble please email us!
+holly.pacey/benjamin.hodkinson@physics.ox.ac.uk
+
 ## Downloading the Git code
 
 Can use either the github or gitlab.cern repos.
@@ -42,7 +45,7 @@ Or use conda to set up the virtual environment:
 - Download, install and activate miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need) Install miniconda in your data/ area rather than your home/ area.
 - create and set up the environment via ```source setup/setup_conda.sh```
 
-## Getting the data for Part 1+3 (Lectures 3+5):
+## Getting the data for Lectures 3+5 Tutorials:
 
 if you are working on ppxlint, just softlink it:
 ```
@@ -150,9 +153,10 @@ git push origin <your_name_branch>
 ```
 
 Which creates a new branch of the code in the online repo with your change. You can then, via the web browser, create a Merge/Pull request with your branch as a source, and main/master as the 'target'. If you add Ben and Holly as reviewers then we can check it and merge it in.
+
 Then back in your local directory, pull/fetch again to get the new remote repo changes in your local repo, and switch back to the master/main branch fresh for future development....
 
-# Part 1 (Lecture 3: Concepts in Programming)
+# Lecture 3: Concepts in HEP Programming
 
 There are too many topics to fit into one hour, and you have too broad a range of existing experience/needs. So, you have many choices of what to do now! All the materials will also remain available to you if later on in your PhD you want to come back and learn about something else.
 
@@ -177,11 +181,11 @@ You can use this as a guide later also if you want to refactor/document/setup-CI
 Alternatively, the HEP Software Foundation has excellent tutorials on the topics covered and more: [https://hsf-training.org/training-center/](https://hsf-training.org/training-center/).
 
 
-# Part 2 (Lecture 4: Practical Intro to Machine Learning)
+# Lecture 4: Practical Machine Learning
 
 Tutorials are all in the ML folder in jupyeter notebooks.
 
-# Part 3 (Lecture 5: Statistics and Analysis)
+# Lecture 5: Statistical Tools
 
 In the Fitting folder there are
 
@@ -189,7 +193,7 @@ In the Fitting folder there are
 
 (2) a meaty Higgs -> diphoton script going through a full discovery/exclusion analysis with RooStats (new, kept as .py not .ipynb after some memory issues, sorry)
 - Includes: functional form fits; setting up a likelihood, RooWorkspace, defining s+b and b-only models; profile likelihood fitting; discovery fits; exclusion fits; CLs upper limit scans.
-- This builds on the results from part1, namely the histograms made. We have a slightly more complete version, compared to last week this just has a few more cuts added and runs over all the Higgs signal processes. The final version of the code can be found here if you are interested:  ```part1_process_TTree_root_completed.ipynb```. We've added the needed histograms to git.
+- This builds on the results from part1 (Lecture 3) namely the histograms made. We have a slightly more complete version, compared to last week this just has a few more cuts added and runs over all the Higgs signal processes. The final version of the code can be found here if you are interested:  ```part1_process_TTree_root_completed.ipynb```. We've added the needed histograms to git.
 - Please set up an environment with ROOT (or if you are on pplxint you don't need to setup anything).
 The RooStats script is run via: ```python Fitting/part2_discoHiggs.py  -i histograms/GamGam_root/ -o plots/ -f poly4```
 - As the top of the script says, we suggest you work through this by commenting out everything in main() and slowly readding each step. For each step, read through the function and terminal outputs to check your understanding bit by bit.
