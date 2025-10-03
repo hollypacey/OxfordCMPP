@@ -1,8 +1,11 @@
-# Downloading the Git code
+# Pre-Tutorial Setup Instructions
+
+## Downloading the Git code
 
 Can use either the github or gitlab.cern repos.
 - [https://gitlab.cern.ch/hpacey/oxfordcmpp](https://gitlab.cern.ch/hpacey/oxfordcmpp)
 - [https://github.com/hollypacey/OxfordCMPP](https://github.com/hollypacey/OxfordCMPP)
+
 Anyone can get a github account, and anyone with a cern account will have a gitlab cern account.
 Recommend to set up SSH keys on your machine for authentication. Instructions here to generate a new key and upload it: [github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) [gitlab](https://docs.gitlab.com/user/ssh/)
 
@@ -18,26 +21,28 @@ Jupyter notebooks are good for tutorials to step though bits of code in subsecti
 You can also still view the code itself on the git repo online.
 However, in your actual PhD work we'd recommend using proper scripts in a modular package structure.
 
-# Setting up the environment
+## Setting up the environment
 
-## The tutorials that use ROOT: 
+For the analysis tutorials in the course, we have 2 versions either using ROOT or pythonic workflows. You can pick the one you think will be the most relevant to your PhD work.
+
+### The tutorials that use ROOT: 
 
 Ideally use ppxlint: just set up a venv using the ```setup/setup_root_venv.sh``` scripts. 
 
 Elsewhere, assuming you don't have a local ROOT installation, use conda. Although ROOT-via_Conda doesn't work on Windows, so for the root tutorial please try to ssh instead.
-- Download and Install miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need)
+- Download and Install miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need). Install miniconda in your data/ area rather than your home/ area.
 - switch it on. via ```eval "$(/your/path/to/miniconda/bin/conda shell.bash hook)"```
 - create and set up the environment via setup/setup_conda_root.sh script.
 
-## The pythonic tutorials:
+### The pythonic tutorials:
 
 Either set up a venv using the ```setup/setup_venv.sh``` scripts. 
 
 Or use conda to set up the virtual environment:
-- Download, install and activate miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need)
+- Download, install and activate miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need) Install miniconda in your data/ area rather than your home/ area.
 - create and set up the environment via ```source setup/setup_conda.sh```
 
-# Getting the part1 data:
+## Getting the data for Part 1+3 (Lectures 3+5):
 
 if you are working on ppxlint, just softlink it:
 ```
@@ -50,7 +55,7 @@ scp -r -o 'ProxyJump username@bastion.physics.ox.ac.uk' username@pplxint12.physi
 
 OR you can download it directly from here: [here](https://atlas-opendata.web.cern.ch/Legacy13TeV/) GamGam.zip has everything.
 
-# Launching a Jupyter notebook remotely 
+## Launching a Jupyter notebook remotely 
 We want to run Jupyter remotely on pplxint but open the notebook in a browser on our laptop.
 
 ### From a linux machine:
@@ -83,9 +88,11 @@ Make a note of the port used (You should see some printout like `Jupyter Server 
 
 (See https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/ for explanation on these steps)
 
-# Set up via VSCode
+## Setup via VSCode
 
-## ssh into pplxint via VSCode:
+We recommend trying VSCode, as it has a huge amount of functionality and extensions that allow you to develop code efficiently. You can ssh into pplxint with it directly.
+
+### ssh into pplxint via VSCode:
 - For windows: Install and setup windows openssh first [info](https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client)
 - Then setup ssh in vscode [info](https://code.visualstudio.com/docs/remote/ssh), helpful stack overflow about bastion jumping [here](https://stackoverflow.com/questions/76484417/vscode-how-to-connect-to-remote-ssh-host-inside-an-ssh-host). Follow instructions to make ssh keys for bastion and pplxint12/13.
   Involves making a ~/.ssh/config that will look roughly like this:
@@ -103,7 +110,7 @@ ProxyJump bastion
 User <your username>
 ```
 
-## Use jupyter via VScode:
+### Use jupyter via VScode:
 
 some info [here](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 - Setup an environment that has jupyter, ipython, ipykernel installed.
@@ -111,11 +118,11 @@ some info [here](https://code.visualstudio.com/docs/datascience/jupyter-notebook
 - on the top right click 'select kernel', click 'Python Environments...' in the top menu, then select the appropriate venv/conda path.
 
 
-# Part 0 - Before Tutorials
+## Pre-tutorial Git Practice 
 
-Please check you can download the git repo and setup conda/venv for either the root/pythonic environment, depending on which tutorial you think you'd like to do (see below).
+Please check you can download the git repository (repo) and setup conda/venv for either the root/pythonic environment, depending on which tutorial you think you'd like to do (see below).
 
-(optional) You can also check that you can practice pushing to a repo, so after you have cloned it and moved into the repo folder....
+(optional for those new to Git) You can also check that you can practice pushing to a repo, so after you have cloned it and moved into the repo folder....
 
 If any time has passed, check you have all the latest changes:
 ```
@@ -145,7 +152,7 @@ git push origin <your_name_branch>
 Which creates a new branch of the code in the online repo with your change. You can then, via the web browser, create a Merge/Pull request with your branch as a source, and main/master as the 'target'. If you add Ben and Holly as reviewers then we can check it and merge it in.
 Then back in your local directory, pull/fetch again to get the new remote repo changes in your local repo, and switch back to the master/main branch fresh for future development....
 
-# Part 1
+# Part 1 (Lecture 3: Concepts in Programming)
 
 There are too many topics to fit into one hour, and you have too broad a range of existing experience/needs. So, you have many choices of what to do now! All the materials will also remain available to you if later on in your PhD you want to come back and learn about something else.
 
@@ -170,13 +177,18 @@ You can use this as a guide later also if you want to refactor/document/setup-CI
 Alternatively, the HEP Software Foundation has excellent tutorials on the topics covered and more: [https://hsf-training.org/training-center/](https://hsf-training.org/training-center/).
 
 
-# Part 2
+# Part 2 (Lecture 4: Practical Intro to Machine Learning)
+
+Tutorials are all in the ML folder in jupyeter notebooks.
+
+# Part 3 (Lecture 5: Statistics and Analysis)
 
 In the Fitting folder there are
 
-(1) a number of small standalone notebooks to show simple examples of diffeent aspects of RooStats, bayesian inference, MCMC, and SPlot. (taken from last year / online)
+(1) a number of small standalone notebooks to show simple examples of diffeent aspects of RooStats, bayesian inference, MCMC, and SPlot. (taken from 2023 course)
 
-(2) a meaty Higgs -> diphoton script going through a full discovery/exclusion analysis with RooStats (new, kept as .py not .ipynb after the email from IT on friday, sorry)
+(2) a meaty Higgs -> diphoton script going through a full discovery/exclusion analysis with RooStats (new, kept as .py not .ipynb after some memory issues, sorry)
+- Includes: functional form fits; setting up a likelihood, RooWorkspace, defining s+b and b-only models; profile likelihood fitting; discovery fits; exclusion fits; CLs upper limit scans.
 - This builds on the results from part1, namely the histograms made. We have a slightly more complete version, compared to last week this just has a few more cuts added and runs over all the Higgs signal processes. The final version of the code can be found here if you are interested:  ```part1_process_TTree_root_completed.ipynb```. We've added the needed histograms to git.
 - Please set up an environment with ROOT (or if you are on pplxint you don't need to setup anything).
 The RooStats script is run via: ```python Fitting/part2_discoHiggs.py  -i histograms/GamGam_root/ -o plots/ -f poly4```
