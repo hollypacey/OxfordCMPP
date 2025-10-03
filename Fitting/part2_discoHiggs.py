@@ -334,9 +334,11 @@ def build_model(data_file, fit_range, range_to_blind, plot_dir, mH, nSig_predict
     getattr(w, "import")(nSig_SM)
 
     # Now set the 'expected' yield part of our Poisson to go into our Likelihood
-    # expression for expected signal yield = signal strength mu_sig * our predicted signal yield from the crystal ball fit. Multiply by our signal crystal PDF.
-    # expression for expected background yield = our predicted bg yield from the exponential fit. Multiply by our bg function PDF.
+    # expression for expected signal yield = signal strength mu_sig * our TOTAL predicted signal yield from the crystal ball fit. Multiply by our signal crystal PDF.
+    # expression for expected background yield = our TOTAL predicted bg yield from the exponential fit. Multiply by our bg function PDF.
     # the SUM gives our total expected yield = expected signal yield + expected background yield
+    # This kind of likelihood with functional forms for s and bg is nicely explained here: https://indico.cern.ch/event/107747/contributions/32691/attachments/24407/35101/cowan.pdf
+    # If you were doing a binned fit using MC/data-driven predictions then you wouldn't have these PDF terms for functions, and instead you'd have a poisson term for each bin where you input your predicted bg/sig yields in that bin.
     w.factory("SUM::model(expr::nsig('mu_sig*nSig_SM', mu_sig[1, 0, 5], nSig_SM)*sig_crystal, expr::nbg('nBg_SM', nBg_SM)*bg_poly)")
 
     # what is the observed data to compare to our expectation, in the Poisson in our likelihood?
