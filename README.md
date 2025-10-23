@@ -39,7 +39,10 @@ Elsewhere, assuming you don't have a local ROOT installation, use conda. Althoug
 
 ### The pythonic tutorials:
 
-Either set up a venv using the ```setup/setup_venv.sh``` scripts. 
+Either set up the venvs using the scripts:
+ - ```setup/setup_venv_softwaretut.sh``` for the software+coding lecture tutorials.
+ - ```setup/setup_venv_ml.sh``` for the ML lecture tutorials.
+ - ```setup/setup_venv_fitting.sh``` for the statistics lecture tutorials.
 
 Or use conda to set up the virtual environment:
 - Download, install and activate miniconda: https://docs.anaconda.com/miniconda/ (this is a lighter-weight version of full conda to download, but should be fine for anything you need) Install miniconda in your data/ area rather than your home/ area.
